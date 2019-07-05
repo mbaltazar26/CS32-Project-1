@@ -1,3 +1,8 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
+class Arena;
+
 class Player
 {
 public:
@@ -26,3 +31,4 @@ private:
 
 	int    computeDanger(int r, int c) const;
 }; 
+#endif

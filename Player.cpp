@@ -1,8 +1,11 @@
+#include "Player.h"
+#include "Arena.h"
+#include "globals.h"
 #include <string>
-#include <iostream>
 #include <cstdlib>
-using namespace std;
+#include <iostream>
 
+using namespace std;
 
 ///////////////////////////////////////////////////////////////////////////
 //  Player implementations

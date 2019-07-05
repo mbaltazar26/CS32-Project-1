@@ -1,3 +1,6 @@
+#ifndef ROBOT_H
+#define ROBOT_H
+
 class Arena;  // This is needed to let the compiler know that Arena is a
 			  // type name, since it's mentioned in the Robot declaration.
 
@@ -20,4 +23,5 @@ private:
 	int    m_row;
 	int    m_col;
 	int    m_health;
-}; #pragma once
+}; 
+#endif
