@@ -1,3 +1,8 @@
+#ifndef BEFORE_H
+#define BEFORE_H
+
+class Arena; 
+
 class Before
 {
 public:
@@ -5,3 +10,4 @@ public:
 	bool keepTrack(int r, int c);
 	void printWhatWasBefore() const;
 };
+#endif BEFORE_H

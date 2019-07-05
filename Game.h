@@ -1,3 +1,10 @@
+#ifndef GAME_H
+#define GAME_H
+#include <string>
+using namespace std;
+
+class Arena;
+
 class Game
 {
 public:
@@ -11,3 +18,5 @@ public:
 private:
 	Arena * m_arena;
 }; 
+
+#endif 
