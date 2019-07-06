@@ -2,6 +2,7 @@
 #include "Arena.h"
 #include "Player.h"
 #include "Robot.h"
+
 #include <cstdlib>
 #include <iostream>
 
@@ -74,6 +75,11 @@ void Game::play()
 				continue;
 			case 'q':
 				return;
+			case 'b':
+				m_arena->recall().printWhatWasBefore();
+				cout << "Press Enter to continue" << endl;
+				cin.ignore(10000, '\n');
+				continue;
 			case 'c':  // computer moves player
 				msg = p->takeComputerChosenTurn();
 				break;

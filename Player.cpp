@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "Arena.h"
 #include "globals.h"
+
 #include <string>
 #include <cstdlib>
 #include <iostream>
@@ -152,6 +153,7 @@ string Player::takeComputerChosenTurn()
 void Player::stand()
 {
 	m_age++;
+	m_arena->recall().keepTrack(m_row, m_col);
 }
 
 void Player::move(int dir)
@@ -164,11 +166,13 @@ void Player::move(int dir)
 	case LEFT:   if (m_col > 1)               m_col--; break;
 	case RIGHT:  if (m_col < m_arena->cols()) m_col++; break;
 	}
+	m_arena->recall().keepTrack(m_row, m_col);
 }
 
 bool Player::shoot(int dir)
 {
 	m_age++;
+	m_arena->recall().keepTrack(m_row, m_col);
 
 	if (rand() % 3 == 0)  // miss with 1/3 probability
 		return false;

@@ -4,8 +4,11 @@
 #include "Game.h"
 #include "globals.h"
 #include "Player.h"
+
+#include <string>
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 
 using namespace std; 
 

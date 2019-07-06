@@ -2,6 +2,8 @@
 #include "globals.h"
 #include "Player.h"
 #include "Robot.h"
+#include "Before.h"
+
 #include <cstdlib>
 #include <iostream>
 
@@ -11,7 +13,8 @@ using namespace std;
 //  Arena implementations
 ///////////////////////////////////////////////////////////////////////////
 
-Arena::Arena(int nRows, int nCols)
+Arena::Arena(int nRows, int nCols):
+	m_before(nRows, nCols)
 {
 	if (nRows <= 0 || nCols <= 0 || nRows > MAXROWS || nCols > MAXCOLS)
 	{
@@ -177,4 +180,10 @@ bool Arena::moveRobots()
 
 	// return true if the player is still alive, false otherwise
 	return !m_player->isDead();
+}
+
+
+Before& Arena::recall()
+{
+	return m_before;
 }
